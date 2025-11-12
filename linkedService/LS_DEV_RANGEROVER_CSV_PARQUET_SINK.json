@@ -1,0 +1,13 @@
+{
+	"name": "LS_DEV_RANGEROVER_CSV_PARQUET_SINK",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Linked service for adlsdevrangeroverparquet",
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=adlsdevrangeroverparquet;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDg4M0Y1QTJBLTU5NzMtNENEMC04RDFGLTg2NEQyODk3N0U2OF9jM2UxMjMxZi00NDJjLTQ4YWYtOGQ2Ny0yNzBkOWMzM2QyYzIiDQp9"
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "EV_TR_CSV_ADLS",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_CSV_ADLS_MOVEMENT",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/eventtrigeer/blobs/data",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/7a485058-89f8-4e5d-9ff0-4d8b5c9ea3d5/resourceGroups/rg_dev_rangerover001/providers/Microsoft.Storage/storageAccounts/adlsdevrangerovercsv001",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
