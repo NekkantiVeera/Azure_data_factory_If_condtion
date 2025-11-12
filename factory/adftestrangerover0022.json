@@ -1,0 +1,9 @@
+{
+	"name": "adftestrangerover0022",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6bcc7d4b-3a0d-4acd-8682-eddabbc2dfed",
+		"tenantId": "c81d4fd8-2dc1-4daa-9d22-1357bbce59c9"
+	}
+}
