@@ -1,0 +1,129 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevrangerover001"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"LSAvroAPI_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_ADLS_MV_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_ARVO_accountKey": {
+			"value": ""
+		},
+		"LS_DEV_RANGEROVER_CSV_PARQUET_SINK_connectionString": {
+			"value": ""
+		},
+		"LS_DEV_RangeRover_EXCEL_Parquet_accountKey": {
+			"value": ""
+		},
+		"LS_ONPREMSQL_password": {
+			"value": ""
+		},
+		"LS_Orc1_accountKey": {
+			"value": ""
+		},
+		"LS_PL_ONPREM_SQL_password": {
+			"value": ""
+		},
+		"LS_RANGEROVER_CSV_PARQUET_accountKey": {
+			"value": ""
+		},
+		"LS_SQLONPREM_AUDIT_password": {
+			"value": ""
+		},
+		"LS_SQL_BLOB_SINK_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_CSV_password": {
+			"value": ""
+		},
+		"LS_rangerroverblob_connectionString": {
+			"value": ""
+		},
+		"PL_Onprem_SqlServerAd_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LSAvroAPI_properties_typeProperties_url": {
+			"value": "https://adlsdevrangeroverparquet.dfs.core.windows.net/"
+		},
+		"LS_CSV_ADLS_MV_properties_typeProperties_url": {
+			"value": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LS_CSV_ARVO_properties_typeProperties_url": {
+			"value": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LS_DEV_RangeRover_EXCEL_Parquet_properties_typeProperties_url": {
+			"value": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LS_ONPREMSQL_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_ONPREMSQL_properties_typeProperties_database": {
+			"value": "college"
+		},
+		"LS_ONPREMSQL_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"LS_Orc1_properties_typeProperties_url": {
+			"value": "https://adlsdevrangeroverparquet.dfs.core.windows.net/"
+		},
+		"LS_PL_ONPREM_SQL_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_PL_ONPREM_SQL_properties_typeProperties_database": {
+			"value": "AdventureWorks2019"
+		},
+		"LS_PL_ONPREM_SQL_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"LS_RANGEROVER_CSV_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlsdevrangerovercsv001.dfs.core.windows.net"
+		},
+		"LS_SQLONPREM_AUDIT_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLONPREM_AUDIT_properties_typeProperties_database": {
+			"value": "AdventureWorks2019"
+		},
+		"LS_SQLONPREM_AUDIT_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"LS_SQL_CSV_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_CSV_properties_typeProperties_database": {
+			"value": "master"
+		},
+		"LS_SQL_CSV_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"PL_Onprem_SqlServerAd_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"PL_Onprem_SqlServerAd_properties_typeProperties_database": {
+			"value": "AdventureWorks2019"
+		},
+		"PL_Onprem_SqlServerAd_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"EV_TR_CSV_ADLS_properties_typeProperties_scope": {
+			"value": "/subscriptions/7a485058-89f8-4e5d-9ff0-4d8b5c9ea3d5/resourceGroups/rg_dev_rangerover001/providers/Microsoft.Storage/storageAccounts/adlsdevrangerovercsv001"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

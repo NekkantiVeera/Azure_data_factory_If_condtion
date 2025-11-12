@@ -1,0 +1,328 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdevrangerover001"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"LSAvroAPI_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LSAvroAPI'"
+		},
+		"LS_CSV_ADLS_MV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_ADLS_MV'"
+		},
+		"LS_CSV_ARVO_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_ARVO'"
+		},
+		"LS_DEV_RANGEROVER_CSV_PARQUET_SINK_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_DEV_RANGEROVER_CSV_PARQUET_SINK'"
+		},
+		"LS_DEV_RangeRover_EXCEL_Parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DEV_RangeRover_EXCEL_Parquet'"
+		},
+		"LS_ONPREMSQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_ONPREMSQL'"
+		},
+		"LS_Orc1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Orc1'"
+		},
+		"LS_PL_ONPREM_SQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_PL_ONPREM_SQL'"
+		},
+		"LS_RANGEROVER_CSV_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_RANGEROVER_CSV_PARQUET'"
+		},
+		"LS_SQLONPREM_AUDIT_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLONPREM_AUDIT'"
+		},
+		"LS_SQL_BLOB_SINK_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_SQL_BLOB_SINK'"
+		},
+		"LS_SQL_CSV_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_CSV'"
+		},
+		"LS_rangerroverblob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_rangerroverblob'"
+		},
+		"PL_Onprem_SqlServerAd_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'PL_Onprem_SqlServerAd'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LSAvroAPI_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangeroverparquet.dfs.core.windows.net/"
+		},
+		"LS_CSV_ADLS_MV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LS_CSV_ARVO_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LS_DEV_RangeRover_EXCEL_Parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangerovercsv001.dfs.core.windows.net/"
+		},
+		"LS_ONPREMSQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_ONPREMSQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "college"
+		},
+		"LS_ONPREMSQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"LS_Orc1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangeroverparquet.dfs.core.windows.net/"
+		},
+		"LS_PL_ONPREM_SQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_PL_ONPREM_SQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2019"
+		},
+		"LS_PL_ONPREM_SQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"LS_RANGEROVER_CSV_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevrangerovercsv001.dfs.core.windows.net"
+		},
+		"LS_SQLONPREM_AUDIT_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLONPREM_AUDIT_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2019"
+		},
+		"LS_SQLONPREM_AUDIT_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"LS_SQL_CSV_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_CSV_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "master"
+		},
+		"LS_SQL_CSV_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"PL_Onprem_SqlServerAd_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"PL_Onprem_SqlServerAd_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2019"
+		},
+		"PL_Onprem_SqlServerAd_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"EV_TR_CSV_ADLS_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/7a485058-89f8-4e5d-9ff0-4d8b5c9ea3d5/resourceGroups/rg_dev_rangerover001/providers/Microsoft.Storage/storageAccounts/adlsdevrangerovercsv001"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdevrangerover001_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"LSAvroAPI_accountKey": {
+						"value": "[parameters('LSAvroAPI_accountKey')]"
+					},
+					"LS_CSV_ADLS_MV_accountKey": {
+						"value": "[parameters('LS_CSV_ADLS_MV_accountKey')]"
+					},
+					"LS_CSV_ARVO_accountKey": {
+						"value": "[parameters('LS_CSV_ARVO_accountKey')]"
+					},
+					"LS_DEV_RANGEROVER_CSV_PARQUET_SINK_connectionString": {
+						"value": "[parameters('LS_DEV_RANGEROVER_CSV_PARQUET_SINK_connectionString')]"
+					},
+					"LS_DEV_RangeRover_EXCEL_Parquet_accountKey": {
+						"value": "[parameters('LS_DEV_RangeRover_EXCEL_Parquet_accountKey')]"
+					},
+					"LS_Orc1_accountKey": {
+						"value": "[parameters('LS_Orc1_accountKey')]"
+					},
+					"LS_RANGEROVER_CSV_PARQUET_accountKey": {
+						"value": "[parameters('LS_RANGEROVER_CSV_PARQUET_accountKey')]"
+					},
+					"LS_SQL_BLOB_SINK_connectionString": {
+						"value": "[parameters('LS_SQL_BLOB_SINK_connectionString')]"
+					},
+					"LS_rangerroverblob_connectionString": {
+						"value": "[parameters('LS_rangerroverblob_connectionString')]"
+					},
+					"LS_ONPREMSQL_password": {
+						"value": "[parameters('LS_ONPREMSQL_password')]"
+					},
+					"LS_PL_ONPREM_SQL_password": {
+						"value": "[parameters('LS_PL_ONPREM_SQL_password')]"
+					},
+					"LS_SQLONPREM_AUDIT_password": {
+						"value": "[parameters('LS_SQLONPREM_AUDIT_password')]"
+					},
+					"LS_SQL_CSV_password": {
+						"value": "[parameters('LS_SQL_CSV_password')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"LSAvroAPI_properties_typeProperties_url": {
+						"value": "[parameters('LSAvroAPI_properties_typeProperties_url')]"
+					},
+					"LS_CSV_ADLS_MV_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_ADLS_MV_properties_typeProperties_url')]"
+					},
+					"LS_CSV_ARVO_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_ARVO_properties_typeProperties_url')]"
+					},
+					"LS_DEV_RangeRover_EXCEL_Parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_DEV_RangeRover_EXCEL_Parquet_properties_typeProperties_url')]"
+					},
+					"LS_Orc1_properties_typeProperties_url": {
+						"value": "[parameters('LS_Orc1_properties_typeProperties_url')]"
+					},
+					"LS_RANGEROVER_CSV_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_RANGEROVER_CSV_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_ONPREMSQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_ONPREMSQL_properties_typeProperties_server')]"
+					},
+					"LS_ONPREMSQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_ONPREMSQL_properties_typeProperties_database')]"
+					},
+					"LS_ONPREMSQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ONPREMSQL_properties_typeProperties_userName')]"
+					},
+					"LS_PL_ONPREM_SQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_PL_ONPREM_SQL_properties_typeProperties_server')]"
+					},
+					"LS_PL_ONPREM_SQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_PL_ONPREM_SQL_properties_typeProperties_database')]"
+					},
+					"LS_PL_ONPREM_SQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_PL_ONPREM_SQL_properties_typeProperties_userName')]"
+					},
+					"LS_SQLONPREM_AUDIT_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLONPREM_AUDIT_properties_typeProperties_server')]"
+					},
+					"LS_SQLONPREM_AUDIT_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLONPREM_AUDIT_properties_typeProperties_database')]"
+					},
+					"LS_SQLONPREM_AUDIT_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLONPREM_AUDIT_properties_typeProperties_userName')]"
+					},
+					"LS_SQL_CSV_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_CSV_properties_typeProperties_server')]"
+					},
+					"LS_SQL_CSV_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_CSV_properties_typeProperties_database')]"
+					},
+					"LS_SQL_CSV_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_CSV_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfdevrangerover001_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"PL_Onprem_SqlServerAd_password": {
+						"value": "[parameters('PL_Onprem_SqlServerAd_password')]"
+					},
+					"PL_Onprem_SqlServerAd_properties_typeProperties_server": {
+						"value": "[parameters('PL_Onprem_SqlServerAd_properties_typeProperties_server')]"
+					},
+					"PL_Onprem_SqlServerAd_properties_typeProperties_database": {
+						"value": "[parameters('PL_Onprem_SqlServerAd_properties_typeProperties_database')]"
+					},
+					"PL_Onprem_SqlServerAd_properties_typeProperties_userName": {
+						"value": "[parameters('PL_Onprem_SqlServerAd_properties_typeProperties_userName')]"
+					},
+					"EV_TR_CSV_ADLS_properties_typeProperties_scope": {
+						"value": "[parameters('EV_TR_CSV_ADLS_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevrangerover001_ArmTemplate_0')]"
+			]
+		}
+	]
+}
